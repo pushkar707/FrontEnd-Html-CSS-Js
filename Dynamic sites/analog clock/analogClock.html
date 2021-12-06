@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock {
+            position: relative;
+            height: 35vw;
+            width: 35vw;
+            background:  url('clock.gif') no-repeat ;
+            background-size: contain;
+            margin: auto;
+        }
+
+        .hour,.minute,.second{
+            position: absolute;        
+            background-color: black;        
+            opacity: 0.8;
+            transform-origin: bottom;
+        }
+
+        .hour{
+            height: 34%;
+            width: 1%;
+            top: 16%;
+            left: 48.9%;
+            /* display: none; */
+        }
+
+        .minute{
+            height: 36%;
+            width: 1%;
+            top: 14%;
+            left: 49.1%;
+            /* display: none; */
+        }
+
+        .second{
+            height: 38%;
+            width: 1%;
+            top: 12%;
+            left: 49.3%;
+            /* display: none; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="hour"></div>
+        <div class="minute"></div>
+        <div class="second"></div>
+    </div>
+
+
+    <script>
+
+    // Rotation of hour hand 
+    // 1hr = 30 degree 
+    // 1 min = 0.5 degree 
+    // Rotation of hour hand = (30h + m/2)degree 
+
+
+    // Rotation of minute hand 
+    // 1 min = 6 degree 
+    // 1 sec = 0.1 degree 
+    // Rotation for minute hand = (6m + 1/10s)degree 
+
+    // Rotation of second 
+    // 1 sec = 6 degree
+    // Rotation of second hand = 6s degree
+
+        
+
+        setInterval(() => {
+            const date = new Date()
+            const hourTime = date.getHours()
+            const minuteTime = date.getMinutes()
+            const secondTime = date.getSeconds()
+
+            const hrot = 30*hourTime + minuteTime/2
+            const mrot = 6*minuteTime + secondTime/10
+            const srot =6*secondTime
+
+            const hour = document.querySelector('.hour')
+            const minute = document.querySelector('.minute')
+            const second = document.querySelector('.second')
+
+            hour.style.transform = `rotate(${hrot}deg)`
+            minute.style.transform = `rotate(${mrot}deg)`
+            second.style.transform = `rotate(${srot}deg)`
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f3;
+}
+.icon{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.menu ul{
+    display: flex;
+    position: absolute;
+    right: 50px;
+    top: -20px;
+}
+
+.menu ul li{
+    padding: 50px;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.heading{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.email{
+    margin: 20px auto 15px auto;
+    width: 300px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.button{
+    background-color: rgb(250, 169, 18);
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+}
+
+.maincont img{
+    width: 50px;
+}
+
+.maincont{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content{
+    margin-left: 60px;
+    width: 800px;
+}
+
+.content h3{
+    font-size: 1.4rem;
+    margin-bottom: 1px;
+}
+
+.maincont2{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 75px;
+}
+
+.maincont2 img{
+    width: 50px;
+}
+
+.embed{
+    display: flex;
+    justify-content: center;
+    margin-top: 73px;
+}
+
+.packages{
+    display: flex;
+    justify-content: center;
+    margin: 70px 0 35px 0;
+}
+
+.box{
+    border: 2px solid black;
+    margin-right: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.boxhead h3{
+    background-color: rgb(216, 208, 208);
+    padding: 4px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.boxamt{
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.boxcont{
+    margin-bottom: 9px;
+}
+
+.button2{
+    background-color: rgb(250, 169, 18);
+    width: 130px;
+    height: 35px;
+    border-radius: 3px;
+    margin-top: 25px;
+    font-size: 1rem;
+}
+
+.footer{
+    width: 795px;
+    display: flex;
+    justify-content: end;
+    background-color: rgb(180, 177, 177);
+    margin: auto;   
+}
+
+.footer ul{
+    display: flex;
+}
+
+.footer ul li{
+    list-style: none;
+    background-color: rgb(180, 177, 177);
+    padding: 13px;
+}
+
+.footer p{
+    background-color: rgb(180, 177, 177);
+}
+
+.foot p{
+    background-color: rgb(180, 177, 177);
+}
+
+.foot{
+    display: flex;
+    justify-content: end;
+    background-color:rgb(180, 177, 177);   
+    width: 783px;
+    margin: auto;
+    margin-top: -10px;
+    padding-bottom: 12px;
+    padding-right: 12px;    
+}

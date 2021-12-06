@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url("gym.jfif") no-repeat;
+  background-size: cover;
+}
+
+.main li {
+  display: inline;
+  opacity: 1;
+  background: none;
+  padding: 0.8vw;
+  font-size: 3.5vh;
+  font-family: "Orelega One", cursive;
+}
+
+.main li a {
+  color: rgb(245, 245, 245);
+  text-decoration: none;
+}
+
+.main {
+  position: absolute;
+  left: 30vw;
+  background: none;
+  margin-top: 6vh;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  margin: 1vh 4vw;
+  filter: invert(100%);
+}
+
+p {
+  margin: -1.5vh -0.75vw;
+  font-family: "Orelega One", cursive;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 1.8vw;
+  color: white;
+  font-family: "Orelega One", cursive;
+  font-size: 2.8vh;
+  margin: 2.5vh;
+  list-style: none;
+}
+
+.contact li {
+  padding: 0.7vw;
+  margin: 0px 0.5vw;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.form {
+  color: white;
+  margin: 18vh 2vw;
+  /* border: 3px solid rgb(39, 66, 70); */
+  width: 42vw;
+}
+
+h2 {
+  font-size: 30px;
+  padding: 0px 7vw;
+  margin: auto;
+}
+
+.mainform {
+}
+
+.text {
+  text-align: center;
+  font-size: 25px;
+  background: white;
+  color: black;
+  margin: 1vh 6.5vw;
+  border-radius: 5px;
+  width: 25vw;
+  padding: 1vh 2vw;
+  font-family: "Orelega One", cursive;
+}
+
+.btn {
+  text-align: center;
+  font-size: 25px;
+  background: black;
+  color: white;
+  margin: 1vh 6.5vw;
+  border-radius: 5px;
+  width: 29.2vw;
+  padding: 1vh 2vw;
+  font-family: "Orelega One", cursive;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #color {
+            color: red;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 66px;
+            margin-top: 230px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/0952061232.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>THIS IS A <span id="color">THERMOMETER</span> <span id="thermo"></span></h1>
+    <script>
+        const thermo = document.querySelector('#thermo')
+        function temp() {
+            setTimeout(() => {
+                thermo.innerHTML = `<i class="fas fa-thermometer-empty"></i>`
+                thermo.style.color = 'black'
+            }, 1000)
+            setTimeout(() => {
+                thermo.innerHTML = `<i class="fas fa-thermometer-quarter"></i>`
+                thermo.style.color = 'yellow'
+            }, 2000)
+            setTimeout(() => {
+                thermo.innerHTML = `<i class="fas fa-thermometer-half"></i>`
+            }, 3000)
+            setTimeout(() => {
+                thermo.innerHTML = `<i class="fas fa-thermometer-three-quarters"></i>`
+            }, 4000)
+            setTimeout(() => {
+                thermo.innerHTML = `<i class="fas fa-thermometer-full"></i>`
+                thermo.style.color = 'red'
+            }, 5000)
+        }
+        temp()
+        setInterval(temp , 5000)
+
+    </script>
+</body>
+
+</html>

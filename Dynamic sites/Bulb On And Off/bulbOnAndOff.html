@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 40px;
+            border-radius: 4px;
+            background-color: yellow;
+            color: red;
+            font-size: 18px;
+            margin: 0px 25px 0px 25px;
+        }
+        body{
+            text-align: center;
+        }
+        h2{
+            margin-top: 150px;
+            color: blue;
+            font-size: 30px;
+            margin-bottom: 0px;
+        }
+        img{
+            z-index: -2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Press the buttons below to turn the light on or off</h2>
+    <div id="img">
+        <img src="off.jpg" alt="" height="300px">
+    </div>
+    <button id="on">Turn ON</button>
+    <button id="off">Turn OFF</button>
+
+<script>
+    const on = document.querySelector('#on')
+    const off = document.querySelector('#off')
+    const img = document.querySelector('#img')
+
+    const lightOn = `<img src = 'on.png' height="300px">`
+    const lightOff = `<img src = 'off.jpg' height="300px"'>`
+
+    on.addEventListener('click' , function () {
+        img.innerHTML = lightOn
+    })
+
+    off.addEventListener('click' , function () {
+        img.innerHTML = lightOff
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+.row1{
+    display: flex;
+    justify-content: space-around;    
+    margin:0px 15px 0px 40px;    
+}
+
+footer{
+    background-color: rgb(38, 67, 231);
+    display: flex;
+    font-size: large;
+    color: white;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}

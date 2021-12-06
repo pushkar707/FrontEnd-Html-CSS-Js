@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/0952061232.js" crossorigin="anonymous"></script>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 96vh;
+            /* padding: 50px; */
+        }
+
+        .box{
+            height: 200px;
+            font-size: 29px;
+            margin: 5px 52px 0px 0px;
+            text-align: center;
+        }
+        span{
+            display: block;
+            margin: 21px 0px -15px 0px ;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <i class="fas fa-mug-hot fa-4x"></i>
+            <span id="num1" class="counters" data-target='4000' ></span>
+            <p>Projects Completed</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-users fa-4x"></i>
+            <span id="num2" class="counters" data-target='15000'></span>
+            <p>Our Happy Clients</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-tasks fa-4x"></i>
+            <span id="num3" class="counters" data-target='500'></span>
+            <p>OnGoing Projects</p>
+        </div>
+    </div>
+
+<script>
+    // const num1 = document.getElementById('num1')
+    // const num2 = document.getElementById('num2')
+    // const num3 = document.getElementById('num3')
+
+    // function numIncrease(){
+    //     var numb1 = 0
+    //     setInterval(() => {
+    //         if(numb1<=4000){
+    //             num1.innerHTML = numb1
+    //             numb1 = numb1 + 80
+    //         }            
+    //     }, 10); 
+        
+    //     var numb2 = 0
+    //     setInterval(() => {
+    //         if (numb2<=15000) {
+    //             num2.innerHTML = numb2
+    //             numb2 = numb2 + 300
+    //         }            
+    //     }, 10);
+        
+    //     var numb3 = 0
+    //     setInterval(() => {
+    //         if (numb3<=500) {
+    //             num3.innerHTML = numb3
+    //             numb3 = numb3 + 10
+    //         }            
+    //     }, 10);
+    // }
+    // numIncrease()
+
+
+
+    //alternative method by thapa
+
+
+    var counters = document.querySelectorAll('.counters')
+    counters.forEach((counter) => {
+        // console.log(counter);
+        counter.innerHTML = 0
+
+        const IncreaseCounter = () => {
+            const targetcount = +counter.getAttribute('data-target')
+            // console.log(typeof targetcount);
+
+            const initialcount = +(counter.innerHTML)
+
+            const inc = targetcount/100
+
+            if(initialcount<targetcount){
+                counter.innerHTML = initialcount + inc;
+                setTimeout(IncreaseCounter, 5);
+            }
+
+        }
+
+        IncreaseCounter()
+    });
+    
+</script>
+
+</body>
+</html>

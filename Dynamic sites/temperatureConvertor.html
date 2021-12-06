@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            font-size: 23px
+        }
+
+        #tempvalue {
+            height: 28px;
+            width: 160px;
+            font-size: 19px;
+        }
+
+        select {
+            height: 33px;
+            width: 155px;
+            font-size: 19px;
+        }
+
+        input[type='submit'] {
+            margin: 12px 0px 0px auto;
+            height: 30px;
+            font-size: 19px;
+        }
+
+        body {
+            margin-left: 10px;
+        }
+
+        #result{
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form" onsubmit="calculate(); return false">
+        <label for="temp">Please enter the temperature you would like to convert.</label>
+        <br> <br>
+        <input type="number" name="tempvalue" id="tempvalue">
+        <select name="tempselected" id="tempselected">
+            <option value="cel">Celsius</option>
+            <option value="farhan">Farheneit</option>
+        </select>
+        <br>
+        <input type="submit" name='temp' value="Submit">
+    </form>
+
+    <p id="result"><b></b></p>
+
+    <script>
+
+        function calculate() {
+            const tempvalue = document.getElementById('tempvalue').value
+            const tempselected = document.getElementById('tempselected')
+            const tempunit = tempselected.selectedIndex
+            const result = document.getElementById('result')
+
+            if (tempunit == 0) {
+                temperature = (tempvalue - 32) * (5 / 9)
+            result.innerHTML = `${temperature} Celsius`
+            } else if (tempunit == 1) {
+                temperature = tempvalue * (9 / 5) + 32
+            result.innerHTML = `${temperature} Farheneit`
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

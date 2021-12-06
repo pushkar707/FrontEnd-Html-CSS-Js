@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p class="heading">freeCodeCamp Survey Form<p>
+    <p  class="subhead">thanks for taking your time and help us improving the platform.</p>
+    <div class="form">
+        <p class="elementhead">Name</p>
+        <input type="text" placeholder="Enter Your Name" class="formelements" required>
+
+        <p class="elementhead">Email</p>
+        <input type="email" placeholder="Enter Your Email" class="formelements" required>
+
+        <p class="elementhead">Age (optional)</p>
+        <input type="number" class="formelements" placeholder="Enter Your Age">
+
+        <p class="elementhead">Which Role Describes You The Best?</p>
+        <select name="role" id="role" required>
+            <option value="" disabled selected>Select Your Role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time learner</option>
+            <option value="nosay">Perefer Not To Say</option>
+            <option value="other">Other</option>
+        </select>
+
+        <p class="elementhead">Would You Recommend freeCodeCamp To a Friend</p>
+        <input type="radio" name="recom">
+        <p class="radioption">Definitely </p> <br>
+        <input type="radio" name="recom">
+        <p class="radioption">Maybe </p><br>
+        <input type="radio" name="recom">
+        <p class="radioption">Not Sure </p><br>
+
+        <p class="elementhead">What Is Your Favorite Feature of freeCodeCamp</p>
+        <select name="fav" id="fav" required>
+            <option value="Select an Option" disabled selected>Select an Option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">projects</option>
+            <option value="Community">Community</option>
+            <option value="open-source">Open Source</option>
+        </select>
+
+        <div class="improved">
+            <p class="elementhead">What would you like to see improved?</p>
+            <p class="impcheck">(Check all that apply)</p>
+        </div>
+        <input type="checkbox" name="improve">
+        <p class="radioption">Front-End-Projects</p> <br>
+        <input type="checkbox" name="improve">
+        <p class="radioption">Back-End-Projects</p> <br>
+        <input type="checkbox" name="improve">
+        <p class="radioption">Data Visualisation</p> <br>
+        <input type="checkbox" name="improve">
+        <p class="radioption">Challenges</p> <br>
+        <input type="checkbox" name="improve">
+        <p class="radioption">Open Source Community</p> <br>
+        <input type="checkbox" name="improve">
+        <p class="radioption">Gitter Help Rooms</p> <br>
+
+        <p class="elementhead">Any Comment or Suggestion?</p>
+        <textarea name="suggestion" cols="30" rows="10" class="comments"></textarea> <br>
+        
+        <input type="submit" value="Submit" class="submit">
+    </div>
+</body>
+
+</html>

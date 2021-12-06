@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+
+    <script>
+        const container = document.getElementById('container')
+        const country = 'pakistan'
+
+        const request = new XMLHttpRequest()
+        request.open('GET', `https://restcountries.eu/rest/v2/name/${country}`);
+        request.send();
+
+        //Recieving response
+        request.addEventListener('load', function () {
+            const [data] = JSON.parse(this.responseText)
+            // console.log(data.flag);
+
+            const img = `
+            <img src="${data.flag}" alt="">
+            <h1>Capital of ${country} is ${data.capital}</h1>
+            <h1>region of ${country} is ${data.region}</h1>
+            <h1>demonym of ${country} is ${data.demonym}</h1>
+            `
+            container.insertAdjacentHTML('afterbegin', img)
+        })
+    </script>
+
+</body>
+
+</html>
