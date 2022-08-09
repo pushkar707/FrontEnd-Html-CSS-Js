@@ -6,6 +6,10 @@ body{
     overflow: hidden;
     animation: shakebody linear 6s infinite;
 }
+
+.container{
+    position: relative;
+}
 .sky{
     height: 100vh;
     width: 100%;
@@ -41,8 +45,8 @@ body{
     background-repeat: no-repeat;
     position: absolute;
     left: 444px;
-    bottom:30vh;
-    animation: shake linear .3s infinite;
+    top:67vh;
+    animation: shake linear .4s infinite;
 
 }
 
@@ -52,7 +56,7 @@ body{
     position: relative;
     top:42px;
     left:42px;
-    animation: wheelRotation linear .16s infinite;
+    animation: wheelRotation linear .26s infinite;
 }
 
 
@@ -61,7 +65,7 @@ body{
     position: relative;
     top: -39px;
     left: 235px;
-    animation: wheelRotation linear .16s infinite;
+    animation: wheelRotation linear .26s infinite;
 
 }
 
