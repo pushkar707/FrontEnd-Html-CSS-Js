@@ -10,6 +10,20 @@
     background-size: 100vw 100vh;
 }
 
+.inst-head{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.inst-rules{
+    font-size: 1.4rem;
+    width: fit-content;
+    margin: 0.5rem auto;
+    text-align: left;
+}
+
 .gameover{
     font-size: 50px;
     text-align: center;
